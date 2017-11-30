@@ -1,0 +1,19 @@
+<html>
+    <head>
+      <title>Emails</title>
+    </head>
+    <body>
+      
+      <h2>Emails</h2>
+      <form action='/success' method='POST'>
+        <label for="emails">Email Address:<input type="text" name="emailaddress" id="emailaddress"></label>
+        <input type="submit" value="Add">
+      </form>
+
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          <p>Email is not valid. please try again</p>
+      {%endif%}
+      {%endwith%}
+    </body>
+    </html>
